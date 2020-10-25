@@ -1,4 +1,4 @@
-
+#function that applies Lunh's algorithm to generate a validation number:
 def validation(number):
   sum_1 = 0
   sum_2 = 0
@@ -11,7 +11,7 @@ def validation(number):
     sum_2 += sum(int(digit) for digit in str(number_mult))
   validation_number = sum_1 + sum_2 #obtain the validation number.
   return validation_number
-
+#function that uses the validation number to identify if the card is valid and it's brand:
 def check_brand(validation_number):
   if  validation_number % 10 == 0: #check if the validation number represents a valid credit card.
     #if the number is valid then we check to identify what is the brand of the card.
