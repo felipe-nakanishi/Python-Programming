@@ -1,4 +1,4 @@
-
+#function to calculate the validation number through the luhn's algorithm:
 def validation(number):
   sum_1 = 0
   sum_2 = 0
@@ -11,7 +11,7 @@ def validation(number):
     sum_2 += sum(int(digit) for digit in str(number_mult))
   validation_number = sum_1 + sum_2 #obtain the validation number.
   return validation_number
-
+#function to check if the validation number is a valid credit card number:
 def check_brand(validation_number):
   if  validation_number % 10 == 0: #check if the validation number represents a valid credit card.
     #if the number is valid then we check to identify what is the brand of the card.
@@ -23,9 +23,10 @@ def check_brand(validation_number):
       return 'VISA'
   else:
     return 'INVALID'
-
-number = input('Type a credit card number to check if it is valid, please:') #prompt for the user to type a card number
-#call the functions and return the brand of the card if valid.
+  
+#prompt for the user to type a card number:
+number = input('Type a credit card number to check if it is valid, please:') 
+#call the functions and return the brand of the card if valid:
 validation_number = validation(number)
 brand = check_brand(validation_number)
 print(brand)
