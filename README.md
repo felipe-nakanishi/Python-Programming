@@ -1,2 +1,2 @@
 # python-programming
-small programs that i made while studying programming in python.
+This repository consists of little programs that i developed to practice and improve my skills in python programming.
